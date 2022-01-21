@@ -8,6 +8,7 @@ import static ua.goit.groceryStore.Utils.calculateTotalCost;
 
 class MainTest {
 
+    // It is the same as UtilsTest#testCalculateTotalCost ?
     @Test
     void testMain() {
         products();

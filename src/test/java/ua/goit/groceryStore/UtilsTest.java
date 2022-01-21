@@ -35,6 +35,7 @@ class UtilsTest {
     }
 
     @Test
+    //what do we test here? We need some assert
     void testGetCountProducts() {
         getCountProducts("ABBB");
     }
@@ -44,7 +45,7 @@ class UtilsTest {
         getCountProducts("AAAAAA");
 
         double expected = 6;
-        double actual = getProductsCost("A", 6, 20);
+        double actual = getProductsCost("A", 5, 20);
         assertEquals(expected, actual);
     }
 
