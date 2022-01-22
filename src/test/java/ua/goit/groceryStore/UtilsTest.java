@@ -4,6 +4,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ua.goit.groceryStore.Groceries.products;
 import static ua.goit.groceryStore.Utils.*;
@@ -35,9 +38,15 @@ class UtilsTest {
     }
 
     @Test
-    //what do we test here? We need some assert
     void testGetCountProducts() {
+        Map<String, Integer> testProductCodesAndQuantity = new HashMap<>();
+        testProductCodesAndQuantity.put("A", 1);
+        testProductCodesAndQuantity.put("B", 3);
+
         getCountProducts("ABBB");
+
+        assertEquals(testProductCodesAndQuantity.get("A"), productCodesAndQuantity.get("A"));
+        assertEquals(testProductCodesAndQuantity.get("B"), productCodesAndQuantity.get("B"));
     }
 
     @Test

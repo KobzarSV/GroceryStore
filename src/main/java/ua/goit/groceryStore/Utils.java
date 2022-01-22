@@ -13,7 +13,7 @@ public class Utils {
     static Map<String, Integer> productCodesAndQuantity = new HashMap<>();
 
     public static double calculateTotalCost(String productCodes) {
-        double totalCost = 0;
+        double totalCost;
         getCountProducts(productCodes);
         totalCost = getTotalCost();
         return totalCost;
